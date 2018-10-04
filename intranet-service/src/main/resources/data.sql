@@ -1,0 +1,1 @@
+insert into Colaborador values('aaaaa')
