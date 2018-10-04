@@ -1,0 +1,21 @@
+package br.com.upisintranet.iservice;
+
+import java.util.List;
+
+import com.upisintranet.entity.Colaborador;
+
+public interface IColaboradorService {
+
+	long getCusosCount();
+
+	List<Colaborador> getColaborador();
+
+	Colaborador getColaborador(Long id);
+
+	Colaborador postColaborador(Colaborador colaborador);
+
+	Colaborador putColaborador(Long id, Colaborador colaborador);
+
+	void deleteColaborador(Long id);
+	
+}
