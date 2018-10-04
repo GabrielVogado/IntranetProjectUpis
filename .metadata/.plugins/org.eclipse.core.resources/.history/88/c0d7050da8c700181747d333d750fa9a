@@ -1,0 +1,38 @@
+package com.upisintranet.entity;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.constraints.NotBlank;
+
+@Entity
+@Table(name = "ADMINISTRADOR")
+public class Administrador implements Serializable {
+
+	private static final long serialVersionUID = 301211582301644423L;
+
+	@Id
+	@Column(name = "ID_ADMIN")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id_admin;
+
+	@NotBlank
+	@Column(name =  "NOME_ADMIN")
+	private String nome;
+
+	@NotBlank
+	@Temporal(TemporalType.DATE)
+	@Column(name =  "NASCIMENTO_ADMIN")
+	private Date nascimento;
+
+	private String position;
+
+}
